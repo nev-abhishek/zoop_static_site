@@ -15,24 +15,29 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
   <Container>
     <Sectionhead>
       <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="desc">We are a small team who loves shopping!</Fragment>
     </Sectionhead>
 
     <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
-      <h2 class="font-bold text-3xl text-gray-800">
-        Empowering the world with Astro.
-      </h2>
+      <h4 class="font-bold text-2xl text-gray-800">
+        Hey there! 👋 <br>
+        Let’s do a round of introductions, we’ll go first : <br>
+      </h4>
       <p class="text-lg leading-relaxed text-slate-500">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
+        <br>
+        🤸We're a spirited bunch of young minds, (our average age is 25, I hope that still counts as Gen-Z), on a mission to revolutionize the way we shop. <br><br>
+        🛒We realized that the traditional marketplaces just weren't cutting it for us anymore. <br><br>
+        ✨We've always been drawn to the charm of personalised experiences and curated stores that speak our language and offer something truly unique. Mass-produced goods from sweatshops? Not our style. So, we embarked on a journey. <br><br>
+        🥴But here's the rub - the process of discovering and purchasing from these gems was, well, a bit broken. One minute we're scrolling through Instagram, the next we're hunting for reviews on Google or Reddit, and finally, we're jumping to a third website to seal the deal. Talk about a hassle! <br><br>
+        👀Enter Zoop - the antidote to mundane shopping experiences! We're here to shake things up, to bring back the joy of shopping like the good ol' days when we'd hit the town with our friends. <br><br>
+        🥠At Zoop, we're all about conscious purchases with a side of fun. We're bridging the gap between discovery and delight, from our sweatshop straight to your phones! <br><br>
       </p>
     </div>
     <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
         publishedTeamMembers.map((teamMemberEntry) => (
           <div class="group">
-            <div class="w-full aspect-square">
+            {/* <div class="w-full aspect-square">
               <Picture
                 src={teamMemberEntry.data.avatar.src}
                 alt={teamMemberEntry.data.avatar.alt}
@@ -41,13 +46,13 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
                 height={400}
                 class="w-full rounded-md rounded transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-cover object-center aspect-square"
               />
-            </div>
+            </div> */}
 
-            <div class="mt-4 text-center">
+            {/* <div class="mt-4 text-center">
               <h2 class="text-lg text-gray-800">{teamMemberEntry.data.name}</h2>
               <h3 class="text-sm text-slate-500">
                 {teamMemberEntry.data.title}
-              </h3>
+              </h3> */}
             </div>
           </div>
         ))
@@ -55,3 +60,4 @@ const publishedTeamMembers = await getCollection("team", ({ data }) => {
     </div>
   </Container>
 </Layout>
+

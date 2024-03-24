@@ -4,65 +4,59 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Bring Your Own Framework",
+    title: "🛍️ Create Your Own Store",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    icon: "bx:bxs-briefcase",
+      "Why blend in when you were born to stand out? Customise your store front with a unique mix of products, text, videos, and even audio content to truly showcase your individuality.",
+    //icon: "bx:bxs-briefcase",
   },
   {
-    title: "100% Static HTML, No JS",
+    title: "💫 Post Lots of Cool Content",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
+      "Dive into the fun zone! Let's make shopping an experience. Browse through a plethora of captivating short videos and eye-catching product images. No more indecision - with our platform, buying becomes a breeze!",
+    //icon: "bx:bxs-window-alt",
   },
   {
-    title: "On-Demand Components",
+    title: "🌟 Be a Part of Communities",
     description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
+      "Join the party! Connect with fellow enthusiasts in communities where recommendations, reviews, and the latest trends flow freely. Your tribe awaits!",
+    //icon: "bx:bxs-data",
   },
   {
-    title: "Broad Integration",
+    title: "🎥 Go Live",
     description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    icon: "bx:bxs-bot",
+      "Lights, camera, action! Engage with your audience in real-time with livestreams featuring your latest drops or limited-edition products. And hey, why not let them purchase those exclusive goodies right then and there?",
+    //icon: "bx:bxs-bot",
   },
   {
-    title: "SEO Enabled",
+    title: "📊 Manage Your Ops at One Place",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    icon: "bx:bxs-file-find",
+      "Simplify, streamline, succeed! With our integrated backend solutions, handle everything from order processing to inventory management like a pro. Time to take the hassle out of operations!",
+    //icon: "bx:bxs-file-find",
   },
   {
-    title: "Community",
+    title: "💳 Easy Payments and Shipping",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "Say goodbye to the headache of slow shipping and high payment fees. Unlock the perks with just a simple sign-up. It's that easy!",
+    //icon: "bx:bxs-user",
   },
 ];
 ---
 
 <div class="mt-16 md:mt-0">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Everything you need to start a website
+    A new way to browse, engage, and make better shopping decisions!
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    Astro comes batteries included. It takes the best parts of state-of-the-art
-    tools and adds its own innovations.
+    Zoop comes with a whole set of tools to make buying and selling easy, transparent, and super fun!
   </p>
 </div>
 
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
     features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
-        </div>
-        <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
-        </div>
+      <div>
+        <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+        <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
       </div>
     ))
   }

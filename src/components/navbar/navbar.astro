@@ -5,36 +5,36 @@ import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
 const menuitems = [
-  {
-    title: "Features",
-    path: "#",
-    children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
-      { title: "404 Page", path: "/404" },
-    ],
-  },
-  {
-    title: "Pricing",
-    path: "/pricing",
-  },
+  //{
+  //  title: "Features",
+  //  path: "#",
+  //  children: [
+  //    { title: "Action", path: "/" },
+  //    { title: "Another action", path: "#" },
+  //    { title: "Dropdown Submenu", path: "#" },
+  //    { title: "404 Page", path: "/404" },
+  //  ],
+  //},
+  //{
+  //  title: "Pricing",
+  //  path: "/pricing",
+  //},
   {
     title: "About",
     path: "/about",
   },
-  {
-    title: "Blog",
-    path: "/blog",
-  },
+  //{
+  //  title: "Blog",
+  //  path: "/blog",
+  //},
   {
     title: "Contact",
     path: "/contact",
   },
   {
-    title: "Pro Version",
+    title: "Join as a Seller",
     badge: true,
-    path: "https://astroship-pro.web3templates.com/",
+    path: "https://forms.gle/fMrVwa55198PbRKEA",
   },
 ];
 ---
@@ -57,13 +57,13 @@ const menuitems = [
           {
             menuitems.map((item, index) => (
               <>
-                {item.children && (
+              {/* {item.children && (
                   <Dropdown
                     title={item.title}
                     children={item.children}
                     lastItem={index === menuitems.length - 1}
                   />
-                )}
+                )}*/}
 
                 {!item.children && (
                   <li>
@@ -81,7 +81,7 @@ const menuitems = [
                 )}
               </>
             ))
-          }
+          } 
         </ul>
         <div class="lg:hidden flex items-center mt-3 gap-4">
           <Link href="#" style="muted" block size="md">Log in</Link>

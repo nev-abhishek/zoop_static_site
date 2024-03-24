@@ -1,0 +1,29 @@
+---
+component: true
+---
+
+<template>
+  <div>
+    <h2>Frequently Asked Questions</h2>
+    <ul>
+      <!-- Loop through FAQ items -->
+      <script context="module">
+        import { faqItems } from './faqData.js'; // Assuming faqItems are imported from an external file
+      </script>
+      <script>
+        for (const faqItem of faqItems) {
+          ${renderFaqItem(faqItem)}
+        }
+        
+        function renderFaqItem(faqItem) {
+          return `
+            <li>
+              <h3>${faqItem.question}</h3>
+              <p>${faqItem.answer}</p>
+            </li>
+          `;
+        }
+      </script>
+    </ul>
+  </div>
+</template>
