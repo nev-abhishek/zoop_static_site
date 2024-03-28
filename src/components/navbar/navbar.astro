@@ -3,6 +3,8 @@ import Container from "@components/container.astro";
 import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Picture } from "astro:assets";
+import zoopImage from "assets/zoop.svg";
 
 const menuitems = [
   //{
@@ -22,6 +24,7 @@ const menuitems = [
   {
     title: "About",
     path: "/about",
+    id: "about",
   },
   //{
   //  title: "Blog",
@@ -30,11 +33,13 @@ const menuitems = [
   {
     title: "Contact",
     path: "/contact",
+    id: "contact",
   },
   {
     title: "Join as a Seller",
     badge: true,
     path: "https://forms.gle/fMrVwa55198PbRKEA",
+    id: "join_seller",
   },
 ];
 ---
@@ -44,9 +49,13 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Zoop</span><span
-            class="text-slate-500"></span
-          >
+          ><Picture
+            src={zoopImage}
+            alt="Astronaut in the air"
+            style={{ height: "150px", width: "150px" }}
+            loading="eager"
+            format="avif"
+          />
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
@@ -57,7 +66,7 @@ const menuitems = [
           {
             menuitems.map((item, index) => (
               <>
-              {/* {item.children && (
+                {/* {item.children && (
                   <Dropdown
                     title={item.title}
                     children={item.children}
@@ -69,6 +78,9 @@ const menuitems = [
                   <li>
                     <a
                       href={item.path}
+                      {...(item.id == "join_seller"
+                        ? { target: "_blank" }
+                        : {})}
                       class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900">
                       <span> {item.title}</span>
                       {item.badge && (
@@ -81,7 +93,7 @@ const menuitems = [
                 )}
               </>
             ))
-          } 
+          }
         </ul>
       </MenuItems>
     </Astronav>
